@@ -34,7 +34,7 @@ class ConverterTests {
         let output = sut.convertToCelsius(fahrenheit: input)
 
         // then
-        //#expect((output == 0) +- 0.000001)
+        #expect((output == 0))
     }
 
     // Separated in two different tests to isolate them from influencing in each others result
@@ -46,7 +46,7 @@ class ConverterTests {
         let output = sut.convertToCelsius(fahrenheit: input)
 
         // then
-        //#expect((output == 100) +- 0.000001)
+        #expect((output == 100))
     }
 
 }

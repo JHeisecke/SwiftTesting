@@ -9,6 +9,10 @@ import Testing
 
 @testable import SwiftTesting
 
+/*
+ see issue: https://github.com/swiftlang/swift-testing/issues/165
+ SwiftTesting, at the time, doesn't have a way to compare floating values accurately
+ */
 class ConverterTests {
 
     var sut: Converter!
@@ -34,7 +38,8 @@ class ConverterTests {
         let output = sut.convertToCelsius(fahrenheit: input)
 
         // then
-        #expect((output == 0))
+        #expect((output == "0.00"))
+        /// with XCTAssertEquals we have the parameter accuracy, to compare floating points XCTAssertEqual(celsius, 0, accuracy: 0.000001)
     }
 
     // Separated in two different tests to isolate them from influencing in each others result
@@ -46,7 +51,8 @@ class ConverterTests {
         let output = sut.convertToCelsius(fahrenheit: input)
 
         // then
-        #expect((output == 100))
+        #expect((output == "100.00"))
+        ///with XCTAssertEquals we have the parameter accuracy, to compare floating point XCTAssertEqual(celsius, 100, accuracy: 0.000001)
     }
 
 }

@@ -8,9 +8,9 @@
 import Foundation
 
 struct Converter {
-    func convertToCelsius(fahrenheit: Double) -> Double {
+    func convertToCelsius(fahrenheit: Double) -> String {
         let fahrenheit = Measurement(value: fahrenheit, unit: UnitTemperature.fahrenheit)
         let celsius = fahrenheit.converted(to: .celsius)
-        return celsius.value
+        return String(format:"%.2f", celsius.value)
     }
 }

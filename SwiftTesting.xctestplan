@@ -1,0 +1,46 @@
+{
+  "configurations" : [
+    {
+      "id" : "32239BC5-4768-4D42-AC21-CC2E480A9BBA",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:SwiftTesting.xcodeproj",
+      "identifier" : "00FC127A2D027BEA008A5E5A",
+      "name" : "SwiftTesting"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:SwiftTesting.xcodeproj",
+        "identifier" : "00FC128A2D027BEB008A5E5A",
+        "name" : "SwiftTestingTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:SwiftTesting.xcodeproj",
+        "identifier" : "00FC12942D027BEB008A5E5A",
+        "name" : "SwiftTestingUITests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:SwiftTesting.xcodeproj",
+        "identifier" : "00B6DEDA2D11ACFD00FEBB9B",
+        "name" : "AsynchronousTests"
+      }
+    }
+  ],
+  "version" : 1
+}

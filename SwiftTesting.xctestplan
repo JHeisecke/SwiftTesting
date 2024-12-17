@@ -33,7 +33,6 @@
       }
     },
     {
-      "enabled" : false,
       "parallelizable" : true,
       "target" : {
         "containerPath" : "container:SwiftTesting.xcodeproj",
